@@ -3,25 +3,25 @@
 
 const score =  100;
 const scoreValue =  100.3;
-console.log(typeof scoreValue); // number
+// console.log(typeof scoreValue); // number
 
 const isLoggedIn = false;
 
 const outsideTemp = null;
-console.log(typeof outsideTemp); // object
+// console.log(typeof outsideTemp); // object
 
 let userEmail;
 
 const id = Symbol('123');
 const anotherId = Symbol('123');
 
-console.log(typeof id); // Symbol
+// console.log(typeof id); // Symbol
 
 
-console.log(id === anotherId); // false
+// console.log(id === anotherId); // false
 
 const bigNumber = 3647854785248524521112n;
-console.log(typeof bigNumber); // bigint
+// console.log(typeof bigNumber); // bigint
 
 /* Javascript is dynamically typed language */
 
@@ -31,7 +31,7 @@ console.log(typeof bigNumber); // bigint
 
 // Array
 const heroes = ['Shakti-Man', 'Super-Man', 'Bat-Man'];
-console.log(typeof heroes); // object
+// console.log(typeof heroes); // object
 
 
 // Object
@@ -39,17 +39,17 @@ let myObj = {
     name: "Shivaling",
     age: 22
 };
-console.log(typeof myObj); // object
+// console.log(typeof myObj); // object
 
 
 // Function
 const myFunction = function(){
-    console.log("Hello World!");
+    // console.log("Hello World!");
 }
 
-console.log(typeof myFunction); // function (funtion object)
+// console.log(typeof myFunction); // function (funtion object)
 
-myFunction();
+// myFunction();
 
 
 /*
@@ -67,3 +67,29 @@ myFunction();
 */
 
 // Note: typeof null returning "object" is a well-known historical behavior in JavaScript.
+
+
+// *********************************************************************************************
+
+// Stack(Primitive), Heap(Non-Primitive)
+
+let myName = "Shivaling";
+
+let anotherName = myName;
+anotherName = "Pavan";
+
+console.log(myName); // Shivaling
+console.log(anotherName); // Pavan
+
+// -----------------------------------------
+
+let userOne = {
+    email : "user@gmail.com",
+    upi : "upi@ybl"
+};
+
+let userTwo = userOne;
+
+userTwo.email = "shivaling@gmail.com";
+console.log(userOne.email);
+console.log(userTwo.email);
